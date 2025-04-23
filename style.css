@@ -1,44 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
 body {
   margin: 0;
-  background-color: #4d91ff;
-  font-family: 'Courier New', monospace;
-  color: black;
+  padding: 0;
+  background-image: url('https://images.unsplash.com/photo-1610974913060-7b6ef6edb49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.title-bar {
-  background-color: #000080;
-  color: white;
-  padding: 10px;
-  font-size: 14px;
+.overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 60px;
+  border-radius: 12px;
   text-align: center;
-  font-weight: bold;
-  border-bottom: 2px solid black;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
-.desktop {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
-  padding: 40px;
-  justify-items: center;
-  align-items: start;
+.title {
+  font-size: 48px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #aaa;
 }
 
-.icon {
-  text-align: center;
-  width: 80px;
-  cursor: pointer;
+.pulse-box {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
-.icon img {
-  width: 48px;
-  height: 48px;
-  image-rendering: pixelated;
+.pulse {
+  width: 12px;
+  height: 12px;
+  background-color: limegreen;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
 }
 
-.icon span {
-  display: block;
-  margin-top: 8px;
-  font-size: 12px;
-  color: black;
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
 }
