@@ -3,50 +3,48 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('https://images.unsplash.com/photo-1610974913060-7b6ef6edb49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-  background-size: cover;
-  background-position: center;
+  background: #f0f0f0;
   font-family: 'Orbitron', sans-serif;
-  color: #000;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .overlay {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 40px 60px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
   font-size: 48px;
   color: #1a1a1a;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px #aaa;
+  margin-bottom: 30px;
 }
 
-.pulse-box {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+button {
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
-.pulse {
-  width: 12px;
-  height: 12px;
-  background-color: limegreen;
-  border-radius: 50%;
-  animation: pulse 1.5s infinite;
+button:hover {
+  background-color: #222;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.5); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 1; }
+iframe {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  border: none;
 }

@@ -6,12 +6,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay">
+  <div class="overlay" id="start-screen">
     <h1 class="title">jopenhuber</h1>
-    <div class="pulse-box">
-      <div class="pulse"></div>
-      <span>System Status: ONLINE</span>
-    </div>
+    <button onclick="startGame()">Spiel starten</button>
   </div>
+
+  <iframe id="game-frame" src="" frameborder="0" allowfullscreen></iframe>
+
+  <script>
+    function startGame() {
+      document.getElementById("start-screen").style.display = "none";
+      document.getElementById("game-frame").src = "https://hexgl.bkcore.com/play/";
+    }
+  </script>
 </body>
 </html>
